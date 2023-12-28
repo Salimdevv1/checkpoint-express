@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   const day =  currentDate.getDay()
   const days = ["Monday","Tuesday","Wednesday","Thursday","Friday"];
   currentDay = days[d.getDay()-1]
-  if (days.includes(currentDay) &&  9<=hours<=17  ) {
+  if (days.includes(currentDay) &&   9< hours || hours<17 ) {
     res.status(200).send("We are available")
 
   }else {
